@@ -20,3 +20,33 @@
 .App-link {
   color: #09d3ac;
 }
+
+Form{
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+  width:75%;
+  margin: 0 auto;
+
+}
+Form input{
+  width:50%;
+  margin:1rem 2rem;
+  padding:.5rem;
+
+}
+Form label{
+  align-self:flex-start;
+  margin:0;
+  
+}
+Form  label > input{
+  margin:2px;
+  padding:.5rem 1rem;
+  width:10%;
+}
+Form button{
+  width:25%;
+  padding:.5rem;
+
+}
