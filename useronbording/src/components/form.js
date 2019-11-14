@@ -11,11 +11,8 @@ const LogInForm = ({values, errors, touched, status}) => {
     },[status]);
 
     return (
-        // - Name
-        // - Email
-        // - Password
-        // - Terms of Service (checkbox)
-        // - A Submit button to send our form data to the server.
+        <div>
+        
         <Form>
             <Field type="text" name="user" placeholder="user name" />
             {touched.user && errors.user && (
@@ -35,6 +32,20 @@ const LogInForm = ({values, errors, touched, status}) => {
             )}
             <button type="submit">Submit!</button>
         </Form>
+            { users.map(users => (
+                <div key={users.id}>
+                    <h3>{users.name}</h3>
+                    <ul>
+                        <li>email: {users.email}</li>
+                        <li>password {users.password}</li>
+                        
+                    </ul>
+                </div>
+
+                
+            ))}
+        </div>
+        
     
     );
 
